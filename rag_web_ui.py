@@ -59,16 +59,21 @@ def _stream_general_qwen(question: str):
 def predict(message: str, history: list, session_id: str):
     print(f"\n🔍 [DEBUG] 收到用户消息: {message}")
     
-    # ✅ 1. 拦截问候语和无意义短句
+    # === 第一步：快速拦截问候语和极短消息 ===
     stripped = message.strip()
     GREETINGS = {"你好", "hi", "hello", "hey", "谢谢", "好的", "收到", "ok", "嗯", "啊", "哈", "您好"}
     if len(stripped) < 3 or stripped in GREETINGS:
         yield "你好！请问有什么具体问题我可以帮您解答吗？"
         return
 
+    # === 第二步：获取 RAG 实例并判断是否为知识性问题 ===
     rag = get_rag(session_id)
-    
-    # 构建带历史的检索问题
+    if not rag._is_knowledge_question(message):  # 👈 关键：提前判断！
+        print("💬 [INFO] 判定为非知识性问题，切换到通用问答模式")
+        yield from _stream_general_qwen(message)
+        return
+
+    # === 第三步：构建带历史的问题（仅用于知识性问题）===
     history_text = ""
     for msg in history:
         role = msg.get("role", "")
@@ -88,14 +93,13 @@ def predict(message: str, history: list, session_id: str):
     )
     print(f"📝 [DEBUG] 实际检索问题:\n{actual_question}")
 
-    # === 第一阶段：尝试 RAG 检索 ===
+    # === 第四步：执行 RAG 检索 ===
     docs = rag._retrieve_with_hyde(actual_question)
     print(f"📚 [DEBUG] 检索到 {len(docs)} 个文档片段")
 
     context, citations = rag.format_docs_with_citation(docs)
     print(f"📎 [DEBUG] 引用数量: {len(citations)}")
 
-    # 如果完全无检索结果 → 直接走通用问答
     if not docs or not context.strip():
         print("🔄 [INFO] 未检索到相关文档，切换到通用问答模式")
         yield from _stream_general_qwen(message)
@@ -139,7 +143,7 @@ def predict(message: str, history: list, session_id: str):
         print(error_msg)
         yield "抱歉，系统处理请求时发生错误。"
 
-    # === 第二阶段：判断是否需要 fallback 到通用问答 ===
+    # === 第五步：判断是否 fallback ===
     final_answer = answer.strip()
     if final_answer.startswith("根据现有资料无法确定"):
         print("🔄 [INFO] RAG 无法回答，切换到通用问答模式")

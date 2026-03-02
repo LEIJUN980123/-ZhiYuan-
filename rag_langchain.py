@@ -6,6 +6,7 @@ import time
 from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from collections import defaultdict
+import numpy as np
 
 from langchain_core.documents import Document
 from langchain_core.embeddings import Embeddings
@@ -27,24 +28,35 @@ SESSION_HISTORY: Dict[str, List[Dict]] = defaultdict(list)
 # ==============================
 # Re-Ranker 初始化（可选）—— 暂时禁用以兼容 Python 3.12
 # ==============================
-# ⚠️ 注意：在 Python 3.12 上，FlagEmbedding 会触发 transformers 的 LRScheduler 错误
-# ✅ 如需启用，请：
-#    1. 切换到 Python 3.10 或 3.11
-#    2. 取消下方注释，并删除 HAS_RERANKER = False 行
-#
-# try:
-#     from FlagEmbedding import FlagReranker
-#     RERANKER = FlagReranker('BAAI/bge-reranker-base', use_fp16=True)
-#     HAS_RERANKER = True
-#     logger.info("✅ Re-Ranker (bge-reranker-base) 加载成功")
-# except Exception as e:
-#     logger.warning(f"⚠️ Re-Ranker 未启用（可选）: {e}")
-#     HAS_RERANKER = False
-
-# 🔒 当前强制禁用 Re-Ranker（确保 Python 3.12 可运行）
 HAS_RERANKER = False
 RERANKER = None
 logger.info("ℹ️ Re-Ranker 已禁用（如需启用，请使用 Python ≤3.11 并取消上方注释）")
+
+# ==============================
+# 知识性问题模板（用于语义判断）
+# ==============================
+_KNOWLEDGE_TEMPLATES = [
+    "这个怎么操作？",
+    "流程是什么？",
+    "如何配置？",
+    "步骤有哪些？",
+    "有什么要求？",
+    "包含哪些内容？",
+    "具体说明一下",
+    "详细解释",
+    "根据文档回答",
+    "请说明...",
+    "怎么做？",
+    "是什么意思？",
+    "如何安装？",
+    "怎么使用？",
+    "规则是什么？",
+    "标准是什么？",
+    "需要什么条件？"
+]
+
+_SIMILARITY_THRESHOLD = 0.45     # 语义判断阈值
+_DISTANCE_THRESHOLD = 1.2        # Chroma 距离过滤阈值
 
 
 # ==============================
@@ -112,8 +124,6 @@ class LangChainRAGWithMemory:
                 logger.info(f"✅ 向量库构建完成，共 {len(docs)} 个文本块")
             else:
                 logger.warning("⚠️ 无有效文档可加载")
-
-        self.retriever = self.vectorstore.as_retriever(search_kwargs={"k": self.config.top_k})
 
     def _load_and_split_documents(self) -> List[Document]:
         all_docs = []
@@ -209,10 +219,8 @@ class LangChainRAGWithMemory:
         return all_docs
 
     def _rerank_docs(self, query: str, docs: List[Document]) -> List[Document]:
-        # 因 HAS_RERANKER = False，此函数直接返回原列表
         if not HAS_RERANKER or len(docs) <= 1:
             return docs
-        # 此分支当前不会执行，保留结构以便未来启用
         try:
             pairs = [[query, d.page_content] for d in docs]
             scores = RERANKER.compute_score(pairs)
@@ -235,23 +243,47 @@ class LangChainRAGWithMemory:
 """
         return call_qwen(hyde_prompt, model="qwen-turbo")
 
-    def _retrieve_with_hyde(self, question: str) -> List[Document]:
-        stripped = question.strip()
-        GREETINGS = {"你好", "hi", "hello", "hey", "谢谢", "好的", "收到", "ok", "嗯", "啊", "哈", "您好"}
-        
-        if len(stripped) < 3 or stripped in GREETINGS:
-            logger.info("ℹ️ 跳过无意义查询的检索")
-            return []
+    def _is_knowledge_question(self, query: str) -> bool:
+        """智能判断是否为知识性问题（需检索文档）"""
+        query = query.strip()
+        if len(query) < 3:
+            return False
 
+        try:
+            query_emb = compute_embeddings([query])[0]
+            template_embs = compute_embeddings(_KNOWLEDGE_TEMPLATES)
+            
+            query_norm = query_emb / np.linalg.norm(query_emb)
+            template_norms = template_embs / np.linalg.norm(template_embs, axis=1, keepdims=True)
+            similarities = np.dot(template_norms, query_norm)
+            
+            max_sim = float(np.max(similarities))
+            logger.debug(f"🔍 问题 '{query}' 最大相似度: {max_sim:.3f}")
+            
+            return max_sim >= _SIMILARITY_THRESHOLD
+        except Exception as e:
+            logger.warning(f"⚠️ 相似度判断失败，回退到简单规则: {e}")
+            trivial_patterns = ["你好", "谢谢", "聪明吗", "你是谁", "在吗", "ok", "嗯", "哈", "厉害吗", "叫什么"]
+            return not any(p in query for p in trivial_patterns)
+
+    def _retrieve_with_hyde(self, question: str) -> List[Document]:
         start_time = time.time()
         query = self._hyde_generate(question) if self.config.enable_hyde else question
-        docs = self.retriever.invoke(query)
+        
+        results = self.vectorstore.similarity_search_with_score(query, k=self.config.top_k)
+        docs = []
+        for doc, dist in results:
+            if dist <= _DISTANCE_THRESHOLD:
+                docs.append(doc)
+            else:
+                logger.debug(f"🔍 跳过低相关片段 (dist={dist:.3f})")
+
         docs = self._rerank_docs(question, docs)
         logger.debug(f"🔍 检索+重排耗时: {time.time() - start_time:.2f}s, 得到 {len(docs)} 个片段")
         return docs
 
     def qa_chain(self, question: str, session_id: str = "default") -> Tuple[str, List[Dict]]:
-        """返回 (answer, citations)"""
+        """仅用于知识性问题"""
         docs = self._retrieve_with_hyde(question)
         
         if not docs:
@@ -294,7 +326,6 @@ class LangChainRAGWithMemory:
 
     @staticmethod
     def format_docs_with_citation(docs: List[Document]) -> Tuple[str, List[Dict]]:
-        """返回 (context_str, citation_list)"""
         context_parts = []
         citations = []
         total_len = 0
@@ -323,19 +354,20 @@ class LangChainRAGWithMemory:
 
     def ask(self, question: str, session_id: str = "default") -> Dict[str, Any]:
         """
-        ⚠️ 注意：当前 Web UI 可能不调用此方法！
-        所有问答逻辑建议在 UI 层实现（支持流式响应）。
-        此方法仅用于非流式测试。
+        主入口：先判断问题类型
         """
+        if not self._is_knowledge_question(question):
+            # === 非知识性问题：直接回答，不检索，不显示来源 ===
+            answer = "是的，我是一个聪明的 AI 助手。"
+            return {
+                "question": question,
+                "answer": answer,
+                "retrieved_chunks": []
+            }
+
+        # === 知识性问题：正常检索 + 来源 ===
         answer, citations = self.qa_chain(question, session_id)
         
-        stripped_orig = question.strip()
-        GREETINGS = {"你好", "hi", "hello", "hey", "谢谢", "好的", "收到", "ok", "嗯", "啊", "哈", "您好"}
-        is_greeting = len(stripped_orig) < 3 or stripped_orig in GREETINGS
-        
-        if is_greeting or answer.strip().startswith("根据现有资料无法确定"):
-            citations = []
-
         if citations:
             ref_str = "\n\n【来源】\n" + "\n".join(
                 f"- {c['source']} ({c['type']} #{c['index']+1})"
