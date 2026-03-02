@@ -1,0 +1,478 @@
+{
+  "D:\\ai-assistant\\input_docs\\SAPMM功能记录.xlsx": {
+    "fingerprint": "32a0c00801d8ad22fdb150b458ecbca4",
+    "processed_at": "2026-03-02T09:05:14.948829"
+  },
+  "D:\\ai-assistant\\input_docs\\MM教育训练记录.xlsx": {
+    "fingerprint": "d5996b53c90e3d1fcb2687d3cbdb593a",
+    "processed_at": "2026-03-02T09:05:14.995825"
+  },
+  "D:\\ai-assistant\\input_docs\\0. 物料主檔_編碼原則及其大類(Phase2)_v1.0_20250428.xlsx": {
+    "fingerprint": "e7f9487a36706d52c462d0b3fd1f369f",
+    "processed_at": "2026-03-02T09:05:16.252826"
+  },
+  "D:\\ai-assistant\\input_docs\\異動類型清單 Movement type list.xlsx": {
+    "fingerprint": "f9c167918c2ec07666c192f659535e10",
+    "processed_at": "2026-03-02T09:05:19.256828"
+  },
+  "D:\\ai-assistant\\input_docs\\複本 DC2-sap轉檔系統參數 - 總表_0225.xlsx": {
+    "fingerprint": "5daea1842d387b2e666f761943f40515",
+    "processed_at": "2026-03-02T09:05:21.929826"
+  },
+  "D:\\ai-assistant\\input_docs\\倉庫編碼.xlsx": {
+    "fingerprint": "46ca9b8af196c1b8d5d12b47b7334c0d",
+    "processed_at": "2026-03-02T09:05:22.771829"
+  },
+  "D:\\ai-assistant\\input_docs\\中介DB.docx": {
+    "fingerprint": "05c21d63016424afafbf294aa260ae0b",
+    "processed_at": "2026-03-02T09:05:25.365828"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-601_成品鞋接單到出貨(有 Forecast)_SD_MM_PP_FI_CO_QM_v0.3.docx": {
+    "fingerprint": "e2d2c15b39aa977f912cc38a6854aebb",
+    "processed_at": "2026-03-02T09:05:29.245828"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-602_成品鞋接單到出貨 (無 Forecast)_SD_MM_PP_FI_CO_QM_v0.1.docx": {
+    "fingerprint": "3b37faa5b1e427cfec6d48d65ee6e79a",
+    "processed_at": "2026-03-02T09:05:34.362828"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_KUT_MM-採購_補充說明文件_20251119.pptx": {
+    "fingerprint": "7a4eff09630f42039da8d6a3c20df5d9",
+    "processed_at": "2026-03-02T09:05:34.656826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-604_補貨訂單且最終收費(底廠-鞋廠)_SD_MM_PP_FI_CO_QM_v0.1.docx": {
+    "fingerprint": "088679f43cbbeb346315406e17a8b626",
+    "processed_at": "2026-03-02T09:05:37.648826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-605_來料廠接單到出貨免費補貨訂單_SD_MM_PP_FI_CO_QM_v0.1.docx": {
+    "fingerprint": "8dc289b3932518537ad4651f0185aab6",
+    "processed_at": "2026-03-02T09:05:38.496828"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-606_樣品收費訂單(ZF00物料類型)_SD_PP_MM_QM_FI_CO_v0.3.docx": {
+    "fingerprint": "7f9f7f850642c51b734348a82102c4f1",
+    "processed_at": "2026-03-02T09:05:40.920833"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-607-1_公司間原料請採驗(TW鞋材兩段訂單)_MM_QM_SD_FI_CO_v0.1.docx": {
+    "fingerprint": "12c0349c1cb7cb40b340df44daf2bc7a",
+    "processed_at": "2026-03-02T09:05:41.419829"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-607-2_公司間原料請採驗(化工原料兩段訂單)_MM_QM_SD_FI_CO_v0.1.docx": {
+    "fingerprint": "7ff5c100ba5105688f8d475a99851f04",
+    "processed_at": "2026-03-02T09:05:43.530829"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-607-3_公司間原料請採驗(機器零件兩段訂單)_MM_QM_SD_FI_CO_v0.1.docx": {
+    "fingerprint": "d08a501f98136dba71948f0c8e8a34bc",
+    "processed_at": "2026-03-02T09:05:44.067826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-607-4_公司間原料請轉採(庶務採購兩段訂單)_MM_QM_SD_FI_CO_v0.1.docx": {
+    "fingerprint": "767b1d327fdab902aeb9d75e554e2fd8",
+    "processed_at": "2026-03-02T09:05:47.016827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-607_公司間原料統購_MM_QM_SD_FI_CO_v0.1.docx": {
+    "fingerprint": "e46474e65ae61c11f9ea53c55505c229",
+    "processed_at": "2026-03-02T09:05:47.445828"
+  },
+  "D:\\ai-assistant\\input_docs\\主要使用者教育訓練教材_SAP拋轉BPM歷程_v1.0_20251002.docx": {
+    "fingerprint": "ec0f15456a897ba7fe4c84a1ec429adb",
+    "processed_at": "2026-03-02T09:05:47.900826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-608_訂單變更_SD_MM_PP_FI_CO_QM_v0.1.docx": {
+    "fingerprint": "8c0bc000932371f9de1bec7dc3b544dd",
+    "processed_at": "2026-03-02T09:05:50.829827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-608_訂單變更_SD_MM_PP_FI_CO_QM_v0.1_F056.docx": {
+    "fingerprint": "6f72ad05dc704aeb475bb027b587f3e2",
+    "processed_at": "2026-03-02T09:05:51.199828"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-609_試量生產_MM_PP_FI_CO_v0.1.docx": {
+    "fingerprint": "a413b6219daab0ab81899a4dcff6d9ca",
+    "processed_at": "2026-03-02T09:05:51.591829"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-610_單製程代工(集團內)_MM_PP_FI_CO_v0.1.docx": {
+    "fingerprint": "aac5e745c401f6925bd6e41b1a6d98cd",
+    "processed_at": "2026-03-02T09:05:53.733827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-612_集團外委外採購_MM_QM_PP_FI_CO_v0.1.docx": {
+    "fingerprint": "d95b416a6d8149658bfd53a0e75097f6",
+    "processed_at": "2026-03-02T09:05:54.407826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-613_固定資產請採驗作業_MM_FI_v0.1.docx": {
+    "fingerprint": "97790181f97023abb5f2f65fe10160a2",
+    "processed_at": "2026-03-02T09:05:57.167827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-614_機器設備請採驗作業_MM_FI_v1.1_DSZC 調整 251217.docx": {
+    "fingerprint": "c3494348b8701f0edb8e726d6360e11c",
+    "processed_at": "2026-03-02T09:05:57.867827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-615_庶務庫存請採驗作業_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "b3b8e8e9032eb41edb147ac32343a5fe",
+    "processed_at": "2026-03-02T09:05:59.952826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-616_費用類請採驗作業_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "545ece146b88ac50d096e2792b9814b9",
+    "processed_at": "2026-03-02T09:06:00.574826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-617_生質燃料請採驗作業_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "775c729d16118f2eaf78c924eadf3c9e",
+    "processed_at": "2026-03-02T09:06:02.351832"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-618_庫存報廢_MM_PP_FI_CO_v0.1.docx": {
+    "fingerprint": "a5cd39395abc3c13291dc2a32c3641d7",
+    "processed_at": "2026-03-02T09:06:02.963827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-619_盤點作業_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "8d8097921e152af47b17081e4d223b04",
+    "processed_at": "2026-03-02T09:06:05.046832"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-620_研發領退料_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "3cf39ef1f82dd6391859f38386247bc7",
+    "processed_at": "2026-03-02T09:06:05.535826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_KUT_MM-採購_補充說明文件_20251204.pptx": {
+    "fingerprint": "abdb871ae768740700e84ed3129cb83d",
+    "processed_at": "2026-03-02T09:06:06.253827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-621_製工模具作業_SD_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "2604a87996f5705443e72f8bc228084d",
+    "processed_at": "2026-03-02T09:06:08.152827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-622_楦頭請採驗作業_MM_FI_v0.1.docx": {
+    "fingerprint": "8115cb46acbfb41a698c27464fe74e58",
+    "processed_at": "2026-03-02T09:06:08.433827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-623-1_年結作業_FI_v0.1.docx": {
+    "fingerprint": "6a17983825f5793df9324c48ef95870d",
+    "processed_at": "2026-03-02T09:06:08.887826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-623_月結作業_CO_FI_v0.1.docx": {
+    "fingerprint": "fdb5fa794a813cbf980c15c5993ab9e9",
+    "processed_at": "2026-03-02T09:06:10.802828"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-624_底廠半成品訂單(化工)_SD_MM_PP_FI_CO_v0.1.docx": {
+    "fingerprint": "eda78601253aea33cb6afae909ad8f83",
+    "processed_at": "2026-03-02T09:06:11.093827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-625-補貨訂單且最終免收費(底廠-鞋廠)_SD_MM_PP_FI_CO_v0.1.docx": {
+    "fingerprint": "851a7f4170cff144f3e6f29c181747df",
+    "processed_at": "2026-03-02T09:06:11.451826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-612_集團外委外採購_MM_QM_PP_FI_CO_v0.1-FVLY-CROCS - 複製.docx": {
+    "fingerprint": "07f9d150d400689a21849b6f4890b79c",
+    "processed_at": "2026-03-02T09:06:12.721827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-627_免費補貨訂單(底廠-鞋廠)_SD_MM_PP_QM_FI_CO_v0.1.docx": {
+    "fingerprint": "f0a81872232052fc5c085c97deb46e57",
+    "processed_at": "2026-03-02T09:06:13.691825"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-626_訂單挪單_SD_MM_PP_FI_CO_v0.1.docx": {
+    "fingerprint": "b2fad19a84d6f95c101904c277176640",
+    "processed_at": "2026-03-02T09:06:13.836825"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-628_集團內借料_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "d3bf5e530298b782e50e0c416e2d6240",
+    "processed_at": "2026-03-02T09:06:13.977826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-629_集團內調料_SD_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "e2da6c5fab1eefe01afd723bb45a9e06",
+    "processed_at": "2026-03-02T09:06:15.323827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-630_集團外調料_SD_MM_FI_CO_v0.1.docx": {
+    "fingerprint": "69806b146a5f3d55fc4dc1ce6a2f6196",
+    "processed_at": "2026-03-02T09:06:16.164825"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-631_借項訂單情境(Debit Note)_SD_FI_CO_v0.1.docx": {
+    "fingerprint": "d03b3f509d3a1f9b0ac7acb43cf49df4",
+    "processed_at": "2026-03-02T09:06:16.365826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-632_貸項訂單情境(Credit Note)_SD_FI_CO_v0.1.docx": {
+    "fingerprint": "48fe706559a71be4c612585f8330bad0",
+    "processed_at": "2026-03-02T09:06:16.572826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-633_鞋廠退貨情境_SD_MM_PP_FI_CO_v0.1.docx": {
+    "fingerprint": "d5c44dd618952725ffb0e52e2d640a6d",
+    "processed_at": "2026-03-02T09:06:19.107826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-634_固定資產盤點_FI_v0.1.docx": {
+    "fingerprint": "e0190d0d8bce3dc4d2271a59fa062767",
+    "processed_at": "2026-03-02T09:06:19.784827"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-638_A底廠向B底廠買料(跨公司交易)_SD_MM_PP_FI_CO_QM_v0.1.docx": {
+    "fingerprint": "b8a6d6154cba78860ad9ca5035ce980d",
+    "processed_at": "2026-03-02T09:06:20.281831"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT-699_新料號建立到核發_SD_MM_PP_CO_QM_v0.1.docx": {
+    "fingerprint": "69f1447481f25913b58dcd64715a09f4",
+    "processed_at": "2026-03-02T09:06:20.540826"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_Degen 基本操作_v1.0_20251106.docx.pdf": {
+    "fingerprint": "8cf003d9277ebb39c081d4a6dea3720d",
+    "processed_at": "2026-03-02T09:06:23.922828"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0040 生產退料作業_v1.0_20251027.docx": {
+    "fingerprint": "38ae709d908cffd979186efb57a49800",
+    "processed_at": "2026-03-02T09:09:19.994771"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_KUT教材_QM-IN-0020&QM-NT-0010_在庫庫存品質再檢&通知單流程_v1_20251031.docx": {
+    "fingerprint": "d57c8a324c5553bd411ec8a1dc29a3f7",
+    "processed_at": "2026-03-02T09:11:52.874802"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0050 部門領料_v1.0_20251027.docx": {
+    "fingerprint": "1bde5ec5bfdc4847b0d123f3184e25c9",
+    "processed_at": "2026-03-02T09:12:45.805798"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0030 生產領料作業_v1.0_20251029.docx": {
+    "fingerprint": "39dd5b46523d4828a796d3c747a8d811",
+    "processed_at": "2026-03-02T09:13:52.591798"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0060 原物料借料_v1.0_20251028.docx": {
+    "fingerprint": "40ef02edc4eafd546ec7e859def8a4e6",
+    "processed_at": "2026-03-02T09:15:01.044797"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0080 庫存報廢_v1.0_20251028.docx": {
+    "fingerprint": "38bda0b8cb79be8632d34acb862a2ce5",
+    "processed_at": "2026-03-02T09:15:39.563954"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_SIT1-QM-檢驗前檢查及問題排除方法.docx": {
+    "fingerprint": "c2bcc9d5b6108a4e17dbf86485045df4",
+    "processed_at": "2026-03-02T09:16:06.982955"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0110 其他入庫_v1.0_20251027.docx": {
+    "fingerprint": "ec74cb3cdbc45e55d70248aa52231e36",
+    "processed_at": "2026-03-02T09:18:47.568845"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0010 採購單收貨_v1.0_20251023.docx": {
+    "fingerprint": "e9469d9b9876dac75f7f0ce83941399c",
+    "processed_at": "2026-03-02T09:19:44.222711"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0160 分色通知單_v1.0_20251107.docx": {
+    "fingerprint": "78c6fa3e762940519e15e0fbd68a1c71",
+    "processed_at": "2026-03-02T09:21:15.847711"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0170 製工模具報廢_v1.0_20251028.docx": {
+    "fingerprint": "2b405f2111a64b880265ca4d7b3930db",
+    "processed_at": "2026-03-02T09:23:06.174740"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0090 倉庫調撥_v1.0_20251028.docx": {
+    "fingerprint": "f50954d4eb2f1502c87c29152a224850",
+    "processed_at": "2026-03-02T09:23:36.258736"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0100 盤點作業_v1.0_20251104.docx": {
+    "fingerprint": "7f3f5e1cd07940ce2fae95b65a636d3a",
+    "processed_at": "2026-03-02T09:23:41.765737"
+  },
+  "D:\\ai-assistant\\input_docs\\DC2上傳轉檔資料填寫說明.v1.1.pptx": {
+    "fingerprint": "cfc0ba680bd9438b5446c79cc91a6cfa",
+    "processed_at": "2026-03-02T09:23:48.763736"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0120 工單入庫作業流程_v1.0_20251106.docx": {
+    "fingerprint": "18e5dea806f7609150438b944a42e95c",
+    "processed_at": "2026-03-02T09:23:56.287739"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0200 製工模具領用繳回_v1.0_20251104.docx": {
+    "fingerprint": "a922177001e39a517b66336d86e4a87f",
+    "processed_at": "2026-03-02T09:26:12.593851"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0240 模具轉入轉出_v1.0_20251104.docx": {
+    "fingerprint": "20157745a6b44bddbc46b0c41a710edd",
+    "processed_at": "2026-03-02T09:26:26.003850"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0210 製工模具維修_v1.0_20251104.docx": {
+    "fingerprint": "7c93a9a29010154430f6f9779f2c16dc",
+    "processed_at": "2026-03-02T09:28:02.746854"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0220 模具洗模_v1.0_20251104.docx": {
+    "fingerprint": "5d13ca3ab492c1ee3303663974a4a8aa",
+    "processed_at": "2026-03-02T09:28:06.922851"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IM-0070 採購外包發退料_v1.0_20251028.docx": {
+    "fingerprint": "c3b91713f1e1f97a69879b44ec39539b",
+    "processed_at": "2026-03-02T09:28:48.894852"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-MA-0020 供應商建立_v1.0_20251016.docx": {
+    "fingerprint": "0c3fdab569f21e52b610989ebd695682",
+    "processed_at": "2026-03-02T09:30:28.833716"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-PU-0020 供應商評鑑_v1.0_20251015.docx": {
+    "fingerprint": "bbfe8e28b97da9aa8da6dd4f8cb9c65d",
+    "processed_at": "2026-03-02T09:31:55.598527"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-IV-0010 發票驗證流程_v1.0_20251027.docx": {
+    "fingerprint": "bf7cb93040fa8b40e5bf3557d244d6bf",
+    "processed_at": "2026-03-02T09:37:08.840413"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-PU-0010 詢報價更新價格主檔_v1.0_20251017.docx": {
+    "fingerprint": "14e74e6000c60a3856bc280639b17389",
+    "processed_at": "2026-03-02T09:40:31.411540"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-MA-0010 物料主檔建檔_v1.0_20251014.docx": {
+    "fingerprint": "306be03f55b7d637124648c1d810644f",
+    "processed_at": "2026-03-02T09:40:57.924416"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-PU-0030 庫存類請採流程_v1.0_20251020.docx": {
+    "fingerprint": "e5ccba94bf54937362785795eb605945",
+    "processed_at": "2026-03-02T09:42:50.221102"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-PU-0070 採購外包請採驗流程_v1.0_20251021.docx": {
+    "fingerprint": "9b3d5f64bac33fc3ac7b5f8f42d9f164",
+    "processed_at": "2026-03-02T09:43:17.477998"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0010採購單收貨流程圖_v2.2_20250802.pptx": {
+    "fingerprint": "3d6e9986567a1cf5a9c8f3ba8bf6a81d",
+    "processed_at": "2026-03-02T09:43:20.523998"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0030 生產領料作業流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "6f5f955b7f878279b58851c6fdc193fc",
+    "processed_at": "2026-03-02T09:43:23.249256"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0040 生產退料作業流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "28514e7fce9117cbad4c1d074174f3e7",
+    "processed_at": "2026-03-02T09:43:25.652257"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0050 部門領料作業流程圖_v2.1_20250722.pptx": {
+    "fingerprint": "eaaaad760a1fb81e2f2f9eb98fc2b795",
+    "processed_at": "2026-03-02T09:43:28.680027"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0060 原物料借料作業流程圖_v2.1_20250725.pptx": {
+    "fingerprint": "d4aff669344eea0a174d1dfa6fcdefb8",
+    "processed_at": "2026-03-02T09:43:32.007026"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0070 採購外包發退料流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "1770c3afecb3dcb02814cf9dee002431",
+    "processed_at": "2026-03-02T09:43:34.785029"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0080 庫存報廢作業流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "31a00bb541e41b16f79119fdd331afab",
+    "processed_at": "2026-03-02T09:43:37.635028"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0090 倉庫調撥轉倉作業流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "570ec2f6466d74c1f55b07523bf976b2",
+    "processed_at": "2026-03-02T09:43:40.532027"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0100 盤點作業流程圖_v2.2_20250721.pptx": {
+    "fingerprint": "c41236c2538b827cfc6d52eb7c8ff279",
+    "processed_at": "2026-03-02T09:43:44.326424"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0110 其他入庫作業流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "b6d1bb587d7e4497f056b30d38e5444e",
+    "processed_at": "2026-03-02T09:43:46.882423"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0120 工單入庫作業流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "3de0011cc474b60ed284252629f0217e",
+    "processed_at": "2026-03-02T09:43:53.949300"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0160 品管材料分色流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "2cf90d8cc2c2d81c57efcd0d7d4ed0f4",
+    "processed_at": "2026-03-02T09:43:56.937297"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0170 製工模具報廢管理作業流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "457b6ce3143084d25ce10bf47e871267",
+    "processed_at": "2026-03-02T09:44:00.068866"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0200 製工模具領用繳回作業流程圖_v2.1_20250721.pptx": {
+    "fingerprint": "ec0ffe390ca298e31ee0c95af8cb1687",
+    "processed_at": "2026-03-02T09:44:02.698866"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0210 製工模具維修作業流程圖_v2.1_20250722.pptx": {
+    "fingerprint": "e2dadf3b14d1910d8b66aee76040d61e",
+    "processed_at": "2026-03-02T09:44:05.107865"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0220 模具洗模作業流程圖_v2.1_20250722.pptx": {
+    "fingerprint": "0d29a5bea9db4dc4957e8f35c1021a10",
+    "processed_at": "2026-03-02T09:44:07.520866"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IM-0240 模具轉入轉出作業流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "c2e0b8dc46cd23d27c5c1269df555be1",
+    "processed_at": "2026-03-02T09:44:10.169865"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-IV-0010 發票驗證流程_v2.0_20250701.pptx": {
+    "fingerprint": "a44e2895d0d872f6445ce27879f06819",
+    "processed_at": "2026-03-02T09:44:13.082865"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-MA-0010-物料主檔維護流程圖_v2.0_20250701.pptx": {
+    "fingerprint": "70da30f539796a8ba23852f7a0ff75e1",
+    "processed_at": "2026-03-02T09:44:16.293864"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-MA-0020 供應商主檔維護流程_v2.0_20250630.pptx": {
+    "fingerprint": "59151ad55c3b53fd9c3b9aeebcc0c22f",
+    "processed_at": "2026-03-02T09:44:19.259118"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0010 詢報價更新價格主檔流程圖_v2.1_20250630.pptx": {
+    "fingerprint": "7ac1ecff76ddb198ead54bc59c97535c",
+    "processed_at": "2026-03-02T09:44:22.756245"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0020 供應商評鑑_v2.0_20250701.pptx": {
+    "fingerprint": "9f08658b8e5e0f25ac0f87052df8b687",
+    "processed_at": "2026-03-02T09:44:26.213225"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-PU-0040 庶務請採購流程_v1.0_20251021.docx": {
+    "fingerprint": "f95dcc3b95c7481cc4c2586003231b08",
+    "processed_at": "2026-03-02T09:44:28.900925"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0030 庫存類請採流程圖_v2.1_20250723.pptx": {
+    "fingerprint": "000ab0556c2c11ea3f736effdadb71bf",
+    "processed_at": "2026-03-02T09:44:29.005922"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0040 庶務請採流程_v2.0_20250701.pptx": {
+    "fingerprint": "7b2eb75fa90e1566080551eba64da85f",
+    "processed_at": "2026-03-02T09:44:32.079310"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0030 庫存類請採流程圖_v2.2_20250905.pptx": {
+    "fingerprint": "90bd244eac5b22d01131f815f0f3acdf",
+    "processed_at": "2026-03-02T09:44:32.118310"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0050 製工具請採驗流程_v2.2_20250718.pptx": {
+    "fingerprint": "6504ce731cd30c1c7468f0f332239084",
+    "processed_at": "2026-03-02T09:44:34.592309"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0050 製工具請採驗流程_v2.3_20250902.pptx": {
+    "fingerprint": "41445c39f931037cdd54b43a2921d35d",
+    "processed_at": "2026-03-02T09:44:34.982308"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0070 採購外包請採購流程_v2.0_20250701.pptx": {
+    "fingerprint": "bd4b5edfef7fd58e9e453c32690111af",
+    "processed_at": "2026-03-02T09:44:37.532311"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0080 製程委外請採驗流程_v2.0_20250701.pptx": {
+    "fingerprint": "0cd80aaed372d3e2eaa5bdd3fcca74ac",
+    "processed_at": "2026-03-02T09:44:37.845310"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0090 固定資產請採驗流程_v2.1_20250714.pptx": {
+    "fingerprint": "86dbe924438defccc52991c6d259d867",
+    "processed_at": "2026-03-02T09:44:40.328310"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_未來作業流程圖Process flow_MM-PU-0090 固定資產請採驗流程_v2.2_20250902.pptx": {
+    "fingerprint": "bf5ecccfff1437d970b4bcd4a89e2995",
+    "processed_at": "2026-03-02T09:44:40.768309"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_系統參數表_MM_v2.0_20250728.xlsx": {
+    "fingerprint": "b5fa37536dfbe8cb4e70ead8338e4859",
+    "processed_at": "2026-03-02T09:44:48.023312"
+  },
+  "D:\\ai-assistant\\input_docs\\隆典_異動類型_20250617.xlsx": {
+    "fingerprint": "a5a0ed56624d37fc359c0355b09f9068",
+    "processed_at": "2026-03-02T09:44:51.789310"
+  },
+  "D:\\ai-assistant\\input_docs\\隆典_系統參數表_MM_20250425.xlsx": {
+    "fingerprint": "87ddf0e27b554676bb6346c2ad87f8be",
+    "processed_at": "2026-03-02T09:44:58.229609"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-PU-0050 製工具請採驗流程_v1.0_20251021.docx": {
+    "fingerprint": "7e03f1f2be15289f3e0cc9a8eed2253c",
+    "processed_at": "2026-03-02T09:44:58.810839"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_SAP 基本操作_v1.2_20251106.docx": {
+    "fingerprint": "1ffc0a28b911f9c19bd8ce72c5a4f3c4",
+    "processed_at": "2026-03-02T09:46:05.188835"
+  },
+  "D:\\ai-assistant\\input_docs\\转档自检系统.docx": {
+    "fingerprint": "e125c9bc7f5b587974f20e00b7d7d473",
+    "processed_at": "2026-03-02T09:46:43.219836"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-PU-0080 製程委外請採驗流程_v1.0_20251021.docx": {
+    "fingerprint": "59a2d498a8617ef42d61f36c9ae8c760",
+    "processed_at": "2026-03-02T09:46:43.647835"
+  },
+  "D:\\ai-assistant\\input_docs\\賜昌_主要使用者教育訓練教材_MM-PU-0090 固定資產請採驗流程_v1.0_20251022.docx": {
+    "fingerprint": "2f64a64208d212108c3e6ec64387e059",
+    "processed_at": "2026-03-02T09:47:49.781835"
+  }
+}

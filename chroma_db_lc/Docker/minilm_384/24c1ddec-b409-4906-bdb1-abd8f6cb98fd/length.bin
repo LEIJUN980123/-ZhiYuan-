@@ -1,1 +1,0 @@
-invalid type: string "第六章  Docker 应用部署\n6-1  部署一个 SpringBoot 项目\n1、将开发的 springboot 程序打成 jar 包或者 war 包；\n2、将打好的 jar 包或 war 包上传到 Linux 某个目录下，比如:/root/docker\n蛙课网【动力节点旗下品牌】    http://www.wkcto.com", expected a booleanroot -p123456 -e \"show databases;\"\nEXPOSE 3306\ntomcat-8.5.24 .\n

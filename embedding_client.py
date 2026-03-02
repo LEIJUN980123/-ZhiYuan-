@@ -1,88 +1,84 @@
-# embedding_client.py
+# embedding_client.py —— 精简版（仅 sentence-transformers）
 import os
 import logging
-import numpy as np
-from typing import List
-
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except ImportError:
-    pass
+from typing import List, Union
 
 logger = logging.getLogger(__name__)
 
-# ==============================
-# 全局缓存变量（避免重复加载）
-# ==============================
-_LOCAL_EMBEDDING_MODEL = None
-_DASHSCOPE_CONFIGURED = False
+# ✅ 强制只用 sentence-transformers（兼容 bge-small-zh-v1.5）
+try:
+    from sentence_transformers import SentenceTransformer
+    HAS_SENTENCE_TRANSFORMERS = True
+except ImportError:
+    HAS_SENTENCE_TRANSFORMERS = False
+    raise ImportError(
+        "请安装 sentence-transformers:\n"
+        "pip install sentence-transformers"
+    )
 
-
-def _get_local_model():
-    global _LOCAL_EMBEDDING_MODEL
-    if _LOCAL_EMBEDDING_MODEL is None:
-        logger.info("🔄 首次加载本地 MiniLM 模型（384 维）...")
-        try:
-            from sentence_transformers import SentenceTransformer
+class LocalEmbeddingClient:
+    def __init__(self, model_name: str = "BAAI/bge-small-zh-v1.5", device: str = None):
+        self.model_name = model_name
+        
+        if device is None:
             import torch
-            device = "cuda" if torch.cuda.is_available() else "cpu"
-            _LOCAL_EMBEDDING_MODEL = SentenceTransformer(
-                "paraphrase-multilingual-MiniLM-L12-v2",
-                device=device
+            if torch.cuda.is_available():
+                device = "cuda"
+            elif torch.backends.mps.is_available():
+                device = "mps"
+            else:
+                device = "cpu"
+        
+        self.device = device
+        logger.info(f"🌍 使用设备: {device}")
+        
+        # ✅ 只加载 SentenceTransformer
+        logger.info(f"🚀 加载 SentenceTransformer 模型: {model_name}")
+        self.model = SentenceTransformer(model_name, device=device)
+        self.backend = "sentence_transformers"
+        
+        logger.info("✅ 本地 Embedding 模型加载完成")
+
+    def encode(self, texts: Union[str, List[str]], batch_size: int = 25) -> List[List[float]]:
+        if isinstance(texts, str):
+            texts = [texts]
+        if not texts:
+            return []
+        
+        try:
+            embeddings = self.model.encode(
+                texts,
+                batch_size=batch_size,
+                convert_to_numpy=True,
+                normalize_embeddings=True
             )
-            logger.info(f"✅ MiniLM 模型加载完成（设备: {device}）")
+            return embeddings.tolist()
         except Exception as e:
-            raise RuntimeError(f"加载 MiniLM 失败: {e}")
-    return _LOCAL_EMBEDDING_MODEL
+            logger.error(f"❌ Embedding 生成失败: {e}")
+            raise
+
+    @property
+    def dim(self) -> int:
+        sample = self.encode(["测试"], batch_size=1)
+        return len(sample[0]) if sample else 0
 
 
-def get_local_embeddings(texts: List[str]) -> np.ndarray:
-    model = _get_local_model()  # 复用已加载模型
-    embeddings = model.encode(
-        texts,
-        show_progress_bar=False,
-        convert_to_numpy=True,
-        normalize_embeddings=True
-    ).astype(np.float32)
-    return embeddings
+_EMBEDDING_CLIENT = None
+
+def get_embedding_client(model_name: str = "BAAI/bge-small-zh-v1.5") -> LocalEmbeddingClient:
+    global _EMBEDDING_CLIENT
+    if _EMBEDDING_CLIENT is None:
+        _EMBEDDING_CLIENT = LocalEmbeddingClient(model_name)
+    return _EMBEDDING_CLIENT
+
+def compute_embeddings(texts: List[str], batch_size: int = 25) -> List[List[float]]:
+    client = get_embedding_client()
+    return client.encode(texts, batch_size=batch_size)
 
 
-def get_qwen_embeddings(texts: List[str]) -> np.ndarray:
-    global _DASHSCOPE_CONFIGURED
-    try:
-        import dashscope
-        from dashscope import TextEmbedding
-    except ImportError:
-        raise ImportError("请安装: pip install dashscope")
-
-    api_key = os.getenv("DASHSCOPE_API_KEY")
-    if not api_key:
-        raise ValueError("❌ 未设置 DASHSCOPE_API_KEY")
-
-    if not _DASHSCOPE_CONFIGURED:
-        dashscope.api_key = api_key
-        _DASHSCOPE_CONFIGURED = True
-        logger.info("☁️ Qwen Embedding 已配置（API Key 设置成功）")
-
-    embeddings = []
-    batch_size = 25
-    for i in range(0, len(texts), batch_size):
-        batch = texts[i:i + batch_size]
-        response = TextEmbedding.call(
-            model="text-embedding-v2",
-            input=batch
-        )
-        if response.status_code != 200:
-            raise RuntimeError(f"Qwen API 错误: {response.code} - {response.message}")
-        embeddings.extend([item["embedding"] for item in response.output["embeddings"]])
-    
-    return np.array(embeddings, dtype=np.float32)
-
-
-def get_embeddings(texts: List[str]) -> np.ndarray:
-    use_qwen = os.getenv("USE_QWEN_EMBEDDING", "false").lower() == "true"
-    if use_qwen:
-        return get_qwen_embeddings(texts)
-    else:
-        return get_local_embeddings(texts)
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    client = LocalEmbeddingClient("BAAI/bge-small-zh-v1.5")
+    test_texts = ["你好", "采购流程是什么？"]
+    embeddings = client.encode(test_texts)
+    print(f"✅ 向量维度: {len(embeddings[0])}")
